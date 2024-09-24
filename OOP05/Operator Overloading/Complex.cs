@@ -38,7 +38,7 @@ namespace OOP05.Operator_Overloading
             };
         }
 
-        public static Complex operator -(Complex Left, Complex Right)
+        public static Complex operator - (Complex Left, Complex Right)
         {
 
             return new Complex()
@@ -48,7 +48,28 @@ namespace OOP05.Operator_Overloading
             };
 
         }
+
+        public static Complex operator ++ (Complex C)
+        {
+            // 2 + 5i => 3+ 5i
+            return new Complex()
+            {
+             Real = (C?.Real ?? 0) + 1,
+             Imag = (C?.Imag ?? 0) + 1
+            };
+        }
+
+        public static Complex operator -- (Complex C)
+        {
+            return new Complex()
+            {
+                Real = (C?.Real ?? 0) - 1,
+                Imag = (C?.Imag ?? 0) - 1
+            };
+        }
         #endregion
+
+
 
 
     }
