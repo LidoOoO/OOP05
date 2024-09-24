@@ -67,6 +67,38 @@ namespace OOP05.Operator_Overloading
                 Imag = (C?.Imag ?? 0) - 1
             };
         }
+
+        // > , < 
+        // >= , <=
+        // != , ==
+        public static bool operator > (Complex Left , Complex Right)
+        {
+            // Left.Real == Right.Real => Left.Imag > Right.Imag
+            // Left.Real != Right.Real => Left.Real > Right.Real
+
+            if (Left.Real == Right.Real)
+                return Left.Imag > Right.Imag;
+            else
+                //return Left.Real > Right.Real;
+                return (Left.Real + Left.Imag > Right.Real + Right.Imag);
+            
+        }
+        
+        public static bool operator < (Complex Left , Complex Right)
+        {
+            // Left.Real == Right.Real => Left.Imag < Right.Imag
+            // Left.Real != Right.Real => Left.Real < Right.Real
+
+
+            if (Left.Real == Right.Real)
+                return Left.Imag < Right.Imag;
+            else
+                // return Left.Real < Right.Real;
+                return (Left.Real + Left.Imag < Right.Real + Right.Imag);
+
+        }
+
+
         #endregion
 
 
