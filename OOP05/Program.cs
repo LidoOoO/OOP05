@@ -10,16 +10,16 @@ namespace OOP05
             #region Part 01 Operators Overloading - Binary Operators && Part 02 Operators Overloading - Unary Operators && Part 03 Operators Overloading - Relational Operators
 
 
-            Complex C1 = new Complex() { Real = 3 , Imag = 5};
+            //Complex C1 = new Complex() { Real = 3 , Imag = 5};
 
 
-            Console.WriteLine($"C1 = {C1}"); // 3 + 5i
+            //Console.WriteLine($"C1 = {C1}"); // 3 + 5i
 
-            Complex C2 = new Complex() { Real = 2, Imag = 4 };
+            //Complex C2 = new Complex() { Real = 2, Imag = 4 };
 
-            Console.WriteLine($"C2 = {C2}"); // 2 + 4i
+            //Console.WriteLine($"C2 = {C2}"); // 2 + 4i
 
-            Complex C3 =  default ;
+            //Complex C3 =  default ;
 
             #region Binary Operators Overloading 
 
@@ -63,6 +63,34 @@ namespace OOP05
 
 
             #endregion
+
+
+
+            #endregion
+
+            #region Part 04 Casting Operator Overloading
+
+            //object obj = 2; // Boxing
+
+            //int X = (int) obj; // Explicit Casting
+            //                   // (int) Casting Operator
+
+            //Complex C1 = new Complex()
+            //{
+            //    Real = 2,
+            //    Imag = 4
+            //};
+
+            //string S1 = C1; // Invalid
+            //S1 = (string)C1;
+            //Console.WriteLine(S1);
+
+            ////int Y = (int)C1; // Invalid
+
+            ////// Explicit Casting
+            ////// (int) -> 
+
+            ////Console.WriteLine(Y);
 
             #endregion
         }

@@ -24,7 +24,7 @@ namespace OOP05.Operator_Overloading
         // +
         // Non - Private , Class member Method
 
-        public static Complex operator + (Complex Left, Complex Right)
+        public static Complex operator +(Complex Left, Complex Right)
         {
             // 2 + 5i
             // 5 + 4i
@@ -38,7 +38,7 @@ namespace OOP05.Operator_Overloading
             };
         }
 
-        public static Complex operator - (Complex Left, Complex Right)
+        public static Complex operator -(Complex Left, Complex Right)
         {
 
             return new Complex()
@@ -49,17 +49,17 @@ namespace OOP05.Operator_Overloading
 
         }
 
-        public static Complex operator ++ (Complex C)
+        public static Complex operator ++(Complex C)
         {
             // 2 + 5i => 3+ 5i
             return new Complex()
             {
-             Real = (C?.Real ?? 0) + 1,
-             Imag = (C?.Imag ?? 0) + 1
+                Real = (C?.Real ?? 0) + 1,
+                Imag = (C?.Imag ?? 0) + 1
             };
         }
 
-        public static Complex operator -- (Complex C)
+        public static Complex operator --(Complex C)
         {
             return new Complex()
             {
@@ -71,7 +71,7 @@ namespace OOP05.Operator_Overloading
         // > , < 
         // >= , <=
         // != , ==
-        public static bool operator > (Complex Left , Complex Right)
+        public static bool operator >(Complex Left, Complex Right)
         {
             // Left.Real == Right.Real => Left.Imag > Right.Imag
             // Left.Real != Right.Real => Left.Real > Right.Real
@@ -81,10 +81,10 @@ namespace OOP05.Operator_Overloading
             else
                 //return Left.Real > Right.Real;
                 return (Left.Real + Left.Imag > Right.Real + Right.Imag);
-            
+
         }
-        
-        public static bool operator < (Complex Left , Complex Right)
+
+        public static bool operator <(Complex Left, Complex Right)
         {
             // Left.Real == Right.Real => Left.Imag < Right.Imag
             // Left.Real != Right.Real => Left.Real < Right.Real
@@ -99,6 +99,21 @@ namespace OOP05.Operator_Overloading
         }
 
 
+        #endregion
+
+        #region Casting Operator Overloading
+
+        // (int)
+
+        public static explicit operator int(Complex C)
+        {
+            return C?.Real ?? 0;
+        }
+
+        public static implicit operator string (Complex C)
+        {
+            return C?.ToString() ?? string.Empty;
+        }
         #endregion
 
 
