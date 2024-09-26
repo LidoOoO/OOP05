@@ -1,4 +1,5 @@
-﻿using OOP05.Operator_Overloading;
+﻿using OOP05.Casting_Operator_Overloading;
+using OOP05.Operator_Overloading;
 using System.Runtime.Intrinsics.Arm;
 
 namespace OOP05
@@ -91,6 +92,37 @@ namespace OOP05
             ////// (int) -> 
 
             ////Console.WriteLine(Y);
+
+            #endregion
+
+            #region Part 05 Casting Operator Overloading - Mapping
+
+            // View -> EmployeeViewModel -> Employee [Model] -> Database
+            // Database -> Employee -> EmployeeViewModel -> View
+
+            Employee employee = new Employee()
+            {
+                Id = 10,
+                FullName = "Waleed Mahmoud",
+                Password = "Password",
+                Email = "Email",
+                SecurityStamp = Guid.NewGuid()
+            };
+
+            //EmployeeViewModel employeeView = new EmployeeViewModel();
+
+            //employeeView = (EmployeeViewModel)employee;
+
+            //Console.WriteLine(employeeView.FirstName);
+            //Console.WriteLine(employeeView.LastName);
+
+            //object obj = new EmployeeViewModel() { FirstName = "Waleed" , LastName = "Mahmoud" , Email = "Email" };
+
+            //EmployeeViewModel E = (EmployeeViewModel) obj;
+
+
+            //Console.WriteLine(E.FirstName);
+
 
             #endregion
         }
